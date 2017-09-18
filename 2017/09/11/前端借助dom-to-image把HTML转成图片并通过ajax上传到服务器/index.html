@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java,ajax," />
 
 
 
@@ -94,13 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="CTX&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="之前接到了一个任务，把jsp中的table转成一个图片，保存在指定文件夹并显示在前端。 我的思路是： 一、引用第三方js在前端把table转成图片二、通过ajax把图片上传到服务器，保存在指定文件夹三、浏览器根据文件名从服务器端获取图片 一、引用第三方js在前端把table转成图片一开始我在百度找到了比较多人用过的html2canvas，据说很多坑，但由于这些坑都是几年前被发现的，我觉得现在更新了">
+<meta name="keywords" content="Java,ajax">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端借助dom-to-image把HTML转成图片并通过ajax上传到服务器">
+<meta property="og:url" content="http://yoursite.com/2017/09/11/前端借助dom-to-image把HTML转成图片并通过ajax上传到服务器/index.html">
 <meta property="og:site_name" content="CTX&#39;s blog">
+<meta property="og:description" content="之前接到了一个任务，把jsp中的table转成一个图片，保存在指定文件夹并显示在前端。 我的思路是： 一、引用第三方js在前端把table转成图片二、通过ajax把图片上传到服务器，保存在指定文件夹三、浏览器根据文件名从服务器端获取图片 一、引用第三方js在前端把table转成图片一开始我在百度找到了比较多人用过的html2canvas，据说很多坑，但由于这些坑都是几年前被发现的，我觉得现在更新了">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-18T13:19:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CTX&#39;s blog">
+<meta name="twitter:title" content="前端借助dom-to-image把HTML转成图片并通过ajax上传到服务器">
+<meta name="twitter:description" content="之前接到了一个任务，把jsp中的table转成一个图片，保存在指定文件夹并显示在前端。 我的思路是： 一、引用第三方js在前端把table转成图片二、通过ajax把图片上传到服务器，保存在指定文件夹三、浏览器根据文件名从服务器端获取图片 一、引用第三方js在前端把table转成图片一开始我在百度找到了比较多人用过的html2canvas，据说很多坑，但由于这些坑都是几年前被发现的，我觉得现在更新了">
 
 
 
@@ -129,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/11/前端借助dom-to-image把HTML转成图片并通过ajax上传到服务器/"/>
 
 
 
 
 
-  <title>CTX's blog</title>
+  <title>前端借助dom-to-image把HTML转成图片并通过ajax上传到服务器 | CTX's blog</title>
   
 
 
@@ -160,9 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -255,9 +258,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -287,9 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/11/前端借助dom-to-image把HTML转成图片并通过ajax上传到服务器/" itemprop="url">前端借助dom-to-image把HTML转成图片并通过ajax上传到服务器</a></h1>
+          <h1 class="post-title" itemprop="name headline">前端借助dom-to-image把HTML转成图片并通过ajax上传到服务器</h1>
         
 
         <div class="post-meta">
@@ -361,9 +362,7 @@
       
 
       
-        
-          
-            <p>之前接到了一个任务，把jsp中的table转成一个图片，保存在指定文件夹并显示在前端。</p>
+        <p>之前接到了一个任务，把jsp中的table转成一个图片，保存在指定文件夹并显示在前端。</p>
 <p>我的思路是：</p>
 <h4 id="一、引用第三方js在前端把table转成图片"><a href="#一、引用第三方js在前端把table转成图片" class="headerlink" title="一、引用第三方js在前端把table转成图片"></a>一、引用第三方js在前端把table转成图片</h4><h4 id="二、通过ajax把图片上传到服务器，保存在指定文件夹"><a href="#二、通过ajax把图片上传到服务器，保存在指定文件夹" class="headerlink" title="二、通过ajax把图片上传到服务器，保存在指定文件夹"></a>二、通过ajax把图片上传到服务器，保存在指定文件夹</h4><h4 id="三、浏览器根据文件名从服务器端获取图片"><a href="#三、浏览器根据文件名从服务器端获取图片" class="headerlink" title="三、浏览器根据文件名从服务器端获取图片"></a>三、浏览器根据文件名从服务器端获取图片</h4><hr>
 <h2 id="一、引用第三方js在前端把table转成图片-1"><a href="#一、引用第三方js在前端把table转成图片-1" class="headerlink" title="一、引用第三方js在前端把table转成图片"></a>一、引用第三方js在前端把table转成图片</h2><p>一开始我在百度找到了比较多人用过的<a href="https://github.com/niklasvh/html2canvas" target="_blank" rel="external">html2canvas</a>，据说很多坑，但由于这些坑都是几年前被发现的，我觉得现在更新了这么多个版本应该没啥问题了吧。考虑到稳定性，我下载了0.4.1版本，还真的有坑，只能把可视区域内的html给转换出来，毕竟我的表格数据多变，这种效果肯定是不行的。   </p>
@@ -387,8 +386,6 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> ctx.servlet;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.File;</div><div class="line"><span class="keyword">import</span> java.io.FileOutputStream;</div><div class="line"><span class="keyword">import</span> java.io.IOException;<span class="keyword">import</span> javax.servlet.ServletException;</div><div class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</div><div class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</div><div class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EditorChartServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">service</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</div><div class="line">        String filename = request.getParameter(<span class="string">"filename"</span>);<span class="keyword">if</span> (filename == <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ServletException(<span class="string">"Parameter 'filename' must be supplied"</span>);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        filename = ServletUtilities.searchReplace(filename, <span class="string">".."</span>, <span class="string">""</span>);</div><div class="line">        </div><div class="line">        String imgPath = MediaUtil.getImgPath();</div><div class="line">        File file = <span class="keyword">new</span> File(imgPath, filename);</div><div class="line">        <span class="keyword">if</span> (!(file.exists())) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ServletException(<span class="string">"File '"</span> + file.getAbsolutePath() + <span class="string">"' does not exist"</span>);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        ServletUtilities.sendTempFile(file, response);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>所用到的ServletUtil方法代码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">searchReplace</span><span class="params">(String inputString, String searchString, String replaceString)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = inputString.indexOf(searchString);</div><div class="line">        <span class="keyword">if</span> (i == -<span class="number">1</span>) &#123;</div><div class="line">            <span class="keyword">return</span> inputString;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        String r = <span class="string">""</span>;</div><div class="line">        r = r + inputString.substring(<span class="number">0</span>, i) + replaceString;</div><div class="line">        <span class="keyword">if</span> (i + searchString.length() &lt; inputString.length()) &#123;</div><div class="line">            r = r + searchReplace(inputString.substring(i + searchString.length()), searchString, replaceString);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> r;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sendTempFile</span><span class="params">(File file, HttpServletResponse response)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        String mimeType = <span class="keyword">null</span>;</div><div class="line">        String filename = file.getName();</div><div class="line">        <span class="keyword">if</span> (filename.length() &gt; <span class="number">5</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (filename.substring(filename.length() - <span class="number">5</span>, filename.length()).equals(<span class="string">".jpeg"</span>)) &#123;</div><div class="line">                mimeType = <span class="string">"image/jpeg"</span>;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (filename.substring(filename.length() - <span class="number">4</span>, filename.length()).equals(<span class="string">".png"</span>)) &#123;</div><div class="line">                mimeType = <span class="string">"image/png"</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        sendTempFile(file, response, mimeType);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sendTempFile</span><span class="params">(File file, HttpServletResponse response, String mimeType)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">        <span class="keyword">if</span> (file.exists()) &#123;</div><div class="line">            BufferedInputStream bis = <span class="keyword">new</span> BufferedInputStream(<span class="keyword">new</span> FileInputStream(file));</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (mimeType != <span class="keyword">null</span>) &#123;</div><div class="line">                response.setHeader(<span class="string">"Content-Type"</span>, mimeType);</div><div class="line">            &#125;</div><div class="line">            response.setHeader(<span class="string">"Content-Length"</span>, String.valueOf(file.length()));</div><div class="line">            SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"EEE, dd MMM yyyy HH:mm:ss z"</span>, Locale.ENGLISH);</div><div class="line"></div><div class="line">            sdf.setTimeZone(TimeZone.getTimeZone(<span class="string">"GMT"</span>));</div><div class="line">            response.setHeader(<span class="string">"Last-Modified"</span>, sdf.format(<span class="keyword">new</span> Date(file.lastModified())));</div><div class="line"></div><div class="line">            BufferedOutputStream bos = <span class="keyword">new</span> BufferedOutputStream(response.getOutputStream());</div><div class="line"></div><div class="line">            <span class="keyword">byte</span>[] input = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</div><div class="line">            <span class="keyword">boolean</span> eof = <span class="keyword">false</span>;</div><div class="line">            <span class="keyword">while</span> (!(eof)) &#123;</div><div class="line">                <span class="keyword">int</span> length = bis.read(input);</div><div class="line">                <span class="keyword">if</span> (length == -<span class="number">1</span>) &#123;</div><div class="line">                    eof = <span class="keyword">true</span>;</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    bos.write(input, <span class="number">0</span>, length);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            bos.flush();</div><div class="line">            bis.close();</div><div class="line">            bos.close();</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> FileNotFoundException(file.getAbsolutePath());</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-          
-        
       
     </div>
     
@@ -403,14 +400,22 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/ajax/" rel="tag"># ajax</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -420,10 +425,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -431,6 +437,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -451,8 +461,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -514,6 +533,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、引用第三方js在前端把table转成图片"><span class="nav-number">1.</span> <span class="nav-text">一、引用第三方js在前端把table转成图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、通过ajax把图片上传到服务器，保存在指定文件夹"><span class="nav-number">2.</span> <span class="nav-text">二、通过ajax把图片上传到服务器，保存在指定文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、浏览器根据文件名从服务器端获取图片"><span class="nav-number">3.</span> <span class="nav-text">三、浏览器根据文件名从服务器端获取图片</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、引用第三方js在前端把table转成图片-1"><span class="nav-number"></span> <span class="nav-text">一、引用第三方js在前端把table转成图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dom-to-image介绍"><span class="nav-number"></span> <span class="nav-text">dom-to-image介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、通过ajax把图片上传到服务器，保存在指定文件夹-1"><span class="nav-number"></span> <span class="nav-text">二、通过ajax把图片上传到服务器，保存在指定文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、浏览器根据文件名从服务器端获取图片-1"><span class="nav-number"></span> <span class="nav-text">三、浏览器根据文件名从服务器端获取图片</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -627,10 +662,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
